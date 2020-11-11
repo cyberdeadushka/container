@@ -2,8 +2,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * JUnit tests.
+ */
 public class MyArrayTest {
 
+    /**
+     * Test for addEl().
+     */
     @Test
     public void addEl() {
         MyArray actualArr = new MyArray(2);
@@ -13,6 +19,9 @@ public class MyArrayTest {
         assertEquals(9, actualArr.getEl(2));
     }
 
+    /**
+     * Test for indexAdd().
+     */
     @Test
     public void indexAdd() {
         MyArray actualArr = new MyArray(4, 1);
@@ -22,6 +31,9 @@ public class MyArrayTest {
         assertEquals(5, actualArr.getLength());
     }
 
+    /**
+     * Test for deleteEl().
+     */
     @Test
     public void deleteEl() {
         MyArray actualArr = new MyArray(4, 1);
@@ -31,6 +43,9 @@ public class MyArrayTest {
         assertEquals(2, actualArr.getEl(0));
     }
 
+    /**
+     * Test for getEl().
+     */
     @Test
     public void getEl() {
         MyArray actualArr = new MyArray(3, 7);
