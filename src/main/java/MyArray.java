@@ -1,5 +1,5 @@
 /**
- *
+ * A class with the implementation of the functionality of an array.
  */
 public class MyArray {
     private
@@ -9,31 +9,31 @@ public class MyArray {
 
     public
     /**
-     * Метод, позволяющий узнать размер массива.
-     * @return length - размер массива.
+     * Returns an array size.
+     * @return length - size.
      */
     int getLength() {
         return length;
     }
     /**
-     * Инициализация массива с заданным размером по умолчанию.
+     * Constructs an empty array with an initial capacity (def = 10).
      */
     MyArray() {
         NewArray = new int[def];
         length = def;
     }
     /**
-     * Инициализация массива, размер задается пользователем.
-     * @param size - новый размер массива.
+     * Constructs an empty array with the specified initial size.
+     * @param size - specified initial size.
      */
     MyArray(int size) {
         length = size;
         NewArray = new int[length];
     }
     /**
-     * Инициализация массива, размер и значение переменных задаются пользователем.
-     * @param size - размер массива.
-     * @param data - значение переменных.
+     * Constructs a container with size elements. Each element is a copy of data.
+     * @param size - array's length.
+     * @param data - element's value.
      */
     MyArray(int size, int data) {
         length = size;
@@ -43,8 +43,8 @@ public class MyArray {
         }
     }
     /**
-     * Дабоваление элемента в конец массива.
-     * @param data - новый элемент.
+     * Appends the specified element to the end of this array.
+     * @param data - new element's value.
      */
     void addEl(int data) {
         int newSize = getLength() + 1;
@@ -57,9 +57,9 @@ public class MyArray {
         NewArray = SecArray;
     }
     /**
-     * Добавление нового элемента на определенную позицию в массиве.
-     * @param index - позиция элемента в массиве.
-     * @param data - значение нового элемента.
+     * Inserts the specified element at the specified position in this array.
+     * @param index - position.
+     * @param data - value of the new element.
      */
     void indexAdd(int index, int data) {
         boolean flag = false;
@@ -85,8 +85,8 @@ public class MyArray {
         NewArray = SecArray;
     }
     /**
-     * Удаление элемента из массива.
-     * @param index - индекс удаляемого элемента.
+     * Removes the element at the specified position in this array.
+     * @param index - position of the element.
      */
     void deleteEl(int index) {
         boolean flag = false;
@@ -109,9 +109,9 @@ public class MyArray {
         NewArray = SecArray;
     }
     /**
-     * Извлечение элемента из массива по индексу.
-     * @param index - индекс извлекаемого элемента.
-     * @return res, где res = -1, если индекс - отрицательное число или больше размера массива.
+     * Returns the element at the specified position in this array.
+     * @param index - position of the element.
+     * @return res, where res = -1, if position is less than 0 or more than array's size.
      */
     int getEl(int index) {
         int res = -1;
@@ -125,7 +125,7 @@ public class MyArray {
         return res;
     }
     /**
-     * Вывод массива.
+     * Displays an array.
      */
     void printArr() {
         for (int i=0; i < getLength(); i++)
